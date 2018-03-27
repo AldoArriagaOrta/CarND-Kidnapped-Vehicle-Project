@@ -165,10 +165,6 @@ void ParticleFilter::updateWeights(double sensor_range, double std_landmark[],
 			}
 		}
 
-		vector<int> associations;
-		vector<double> sense_x;
-		vector<double> sense_y;
-
 		// step 2. transform observation to map refefence frame and put them in a new vector "transformed_meas"
 
 		std::vector < LandmarkObs> transformed_meas;
@@ -203,7 +199,6 @@ void ParticleFilter::updateWeights(double sensor_range, double std_landmark[],
 			double weight = exp(-((x_diff*x_diff / (2 * sigma_x*sigma_x)) + (y_diff*y_diff / (2 * sigma_y*sigma_y))));
 			
 			weight_p *= weight;
-			//cout << weight_p << endl;
 		}
 
 		//multiply weight by Gaussian normalization constant
