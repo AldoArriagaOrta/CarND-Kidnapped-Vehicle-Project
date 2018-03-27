@@ -3,6 +3,8 @@
  *
  *  Created on: Dec 12, 2016
  *      Author: Tiffany Huang
+ *  Updated on: Mar 26, 2018
+ *   Co-Author: Aldo Arriaga
  */
 
 #include <random>
